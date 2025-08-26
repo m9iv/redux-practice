@@ -1,6 +1,6 @@
 # Redux practice
 
-Practice project
+Simple bank account form for practicing Store, Action Creators, Thunks, RTK
 
 ## Important commands
 
