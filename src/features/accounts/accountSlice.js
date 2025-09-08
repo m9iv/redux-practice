@@ -9,7 +9,7 @@ const initialState = {
 
 const accountSlice = createSlice({
   name: "account",
-  initialState: initialState,
+  initialState,
   reducers: {
     deposit(state, action) {
       state.balance += action.payload
@@ -62,9 +62,6 @@ export function deposit(amount, currency) {
     )
     const data = await res.json()
     const convertedAmount = data.rates.USD
-
-    console.log(data)
-    console.log(convertedAmount)
 
     dispatch({ type: "account/deposit", payload: convertedAmount })
   }
